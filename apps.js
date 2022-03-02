@@ -55,15 +55,14 @@ const deviceDetails=(details)=>{
           const div = document.createElement('div');
           div.classList.add('col-lg-4');
           div.innerHTML = `
-          <div class="card text-center mb-4 card-bg">
-
-          <img class="w-25 m-auto mt-4" src="${detail.image}" alt="Card image" >
-          <div class="card-body">
-            <h4 class="card-title">${detail.brand}</h4>
-            <p class="card-text">${detail.phone_name}</p>
-            <button onClick= "showSingleDevice('${detail.slug}')" class="btn btn-primary mb-3">Details</button>
-          </div>
-        </div>
+          <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
           `
           // appendChild 
           deviceContainer.appendChild(div);
@@ -99,25 +98,12 @@ const  singleDeviceDetails=(info)=>{
     
     div.innerHTML = `
 
-    <div class="card card-bg mb-3" style="max-width: 600px;">
-    <div class="row g-0">
-      <div class="col-md-4 align-self-center">
-        <img src="${info.image}" class="img-fluid p-1 rounded-start" alt="...">
-      </div>
-      <div class="col-lg-8">
-        <div class="card-body">
-          <h5 class="card-title fw-bold">${info.name}</h5>
-          <p class="card-text"><small class="">${info.releaseDate}</small></p>
-          <h5 class="text-success">Main Features</h5>
-          <p class="m-0 fw-light"> -${info.mainFeatures.storage}</p>
-          <p class="m-0 fw-light"> -${info.mainFeatures.displaySize}</p>
-          <p class="m-0 fw-light"> -${info.mainFeatures.chipSet}</p>
-          <p class="m-0 fw-light"> -${info.mainFeatures.memory}</p>
-          <ol>${info.sensors.map(sensor=>{
-            <li>` ${sensor}`</li>
-          })}</ol>
-        </div>
-      </div>
+    <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
     </div>
   </div>
     
